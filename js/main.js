@@ -2532,6 +2532,39 @@
     else openCompass(id, true);
   }
 
+  var header = document.querySelector(".site-header");
+  var menuToggle = document.querySelector(".mobile-nav-toggle");
+
+  if (header && menuToggle) {
+    menuToggle.addEventListener("click", function () {
+      var isOpen = header.classList.toggle("is-open");
+      menuToggle.classList.toggle("is-active", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Fermer le menu" : "Ouvrir le menu"
+      );
+    });
+
+    header.querySelectorAll(".mobile-nav a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        header.classList.remove("is-open");
+        menuToggle.classList.remove("is-active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Ouvrir le menu");
+      });
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!header.contains(event.target) && header.classList.contains("is-open")) {
+        header.classList.remove("is-open");
+        menuToggle.classList.remove("is-active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Ouvrir le menu");
+      }
+    });
+  }
+
   document.addEventListener("click", function (event) {
     var b = event.target.closest("[data-observation]");
     if (b) {
