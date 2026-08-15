@@ -226,8 +226,8 @@ p {
   padding: 10px 0;
   border-bottom: 1px solid rgba(17, 17, 59, 0.08);
   color: var(--navy);
-  font-size: 0.92rem;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 500;
 }
 
 .hero {
@@ -1565,7 +1565,7 @@ footer p {
   }
 
   .brand img {
-    width: 108px;
+    width: 200px;
   }
 
   .brand span {
