@@ -462,7 +462,7 @@ p {
 .section-heading h2,
 .liaison-copy h2 {
   margin-bottom: 18px;
-  font-size: clamp(2rem, 4vw, 4.2rem);
+  font-size: 48px;
   font-weight: 400;
   letter-spacing: -0.055em;
   line-height: 1.02;
@@ -483,7 +483,7 @@ p {
 
 .compact-heading h2 {
   margin-bottom: 0;
-  /* font-size: clamp(1.8rem, 3vw, 3.1rem); */
+  /* font-size: c   lamp(1.8rem, 3vw, 3.1rem); */
 }
 
 .route-grid {
