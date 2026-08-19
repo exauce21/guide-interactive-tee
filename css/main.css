@@ -112,7 +112,6 @@ p {
   color: var(--muted);
   font-size: 17px;
   font-weight: 500;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -271,7 +270,6 @@ p {
   color: var(--mint);
   font-size: 0.78rem;
   font-weight: 800;
-  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -284,7 +282,6 @@ p {
   margin-bottom: 28px;
   font-size: clamp(3rem, 6vw, 6.6rem);
   font-weight: 800;
-  letter-spacing: -0.065em;
   line-height: 0.94;
 }
 
@@ -379,7 +376,6 @@ p {
 
 .hero-stats strong {
   font-size: 2.35rem;
-  letter-spacing: -0.06em;
 }
 
 .hero-stats span {
@@ -464,7 +460,6 @@ p {
   margin-bottom: 18px;
   font-size: 48px;
   font-weight: 400;
-  letter-spacing: -0.055em;
   line-height: 1.02;
 }
 
@@ -543,7 +538,6 @@ p {
 .route-index {
   font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
   opacity: 0.7;
 }
 
@@ -551,19 +545,18 @@ p {
   margin-bottom: 8px;
   font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .route-card h3 {
   margin-bottom: 24px;
-  font-size: clamp(1.4rem, 2.1vw, 2.1rem);
-  letter-spacing: -0.04em;
+  font-size: 22px;
+  font-weight: 500;
   line-height: 1.05;
 }
 
 .route-card div > span {
-  font-size: 0.82rem;
+  font-size: 18px;
   font-weight: 800;
 }
 
@@ -680,7 +673,6 @@ p {
   color: var(--muted);
   font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
 }
 
 .action-tag {
@@ -688,7 +680,6 @@ p {
   color: var(--tone);
   font-size: 0.7rem;
   font-weight: 800;
-  letter-spacing: 0.09em;
   text-transform: uppercase;
 }
 
@@ -748,14 +739,13 @@ p {
   color: var(--mint);
   font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .detail-header h2 {
   margin-bottom: 22px;
   font-size: clamp(2.3rem, 5vw, 5.2rem);
-  letter-spacing: -0.06em;
+  : -0.06em;
   line-height: 0.98;
 }
 
@@ -817,7 +807,7 @@ p {
   cursor: pointer;
   font-size: 1rem;
   font-weight: 900;
-  letter-spacing: -0.02em;
+  : -0.02em;
   text-transform: uppercase;
 }
 
@@ -895,7 +885,7 @@ p {
   color: var(--mint);
   font-size: 0.72rem;
   font-weight: 800;
-  letter-spacing: 0.09em;
+  : 0.09em;
   text-transform: uppercase;
 }
 
@@ -1000,14 +990,12 @@ p {
   color: var(--blue);
   font-size: 0.7rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .compass-title h3 {
   margin-bottom: 3px;
   font-size: clamp(1.6rem, 3vw, 3rem);
-  letter-spacing: -0.045em;
 }
 
 .compass-title div > span {
@@ -1167,7 +1155,6 @@ p {
 .level-title h3 {
   margin: 0;
   font-size: clamp(1.8rem, 4vw, 3.6rem);
-  letter-spacing: -0.05em;
   text-transform: uppercase;
 }
 
@@ -1189,7 +1176,6 @@ p {
   color: var(--blue);
   font-size: 0.73rem;
   font-weight: 900;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -1408,14 +1394,12 @@ p {
   color: var(--red);
   font-size: 0.7rem;
   font-weight: 900;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .form-header h3 {
   margin: 5px 0 0;
   font-size: 1.6rem;
-  letter-spacing: -0.04em;
   text-transform: uppercase;
 }
 
@@ -1467,7 +1451,6 @@ p {
   color: var(--blue);
   font-size: 0.72rem;
   font-weight: 900;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -1814,7 +1797,7 @@ footer p {
   display: block !important;
   margin-top: 12px !important;
   color: rgba(255, 255, 255, 0.82) !important;
-  font-size: 0.83rem !important;
+  font-size: 16px !important;
   font-weight: 500 !important;
   line-height: 1.45;
 }
@@ -1847,7 +1830,6 @@ footer p {
   margin-bottom: 18px;
   font-size: clamp(1.8rem, 3vw, 3rem);
   line-height: 1.05;
-  letter-spacing: -0.04em;
 }
 .v3-context-callout .context-mark {
   display: grid;
@@ -1880,7 +1862,6 @@ footer p {
   max-width: 800px;
   margin-bottom: 0;
   font-size: clamp(2.3rem, 5vw, 4.8rem);
-  letter-spacing: -0.055em;
   line-height: 0.98;
 }
 .v3-orientation-intro p:last-child {
@@ -1945,7 +1926,6 @@ footer p {
   color: var(--blue);
   font-size: 0.72rem;
   font-weight: 900;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 .v3-choice-grid,
@@ -2092,7 +2072,6 @@ footer p {
   color: var(--blue);
   font-size: 0.68rem;
   font-weight: 900;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 .v3-result-score {
@@ -2249,7 +2228,6 @@ footer p {
   font-size: 0.76rem;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
 }
 .v3-severity-line {
   position: relative;
@@ -2321,7 +2299,6 @@ footer p {
   margin-bottom: 18px;
   font-size: clamp(2.3rem, 4.5vw, 4.6rem);
   line-height: 0.98;
-  letter-spacing: -0.055em;
 }
 .v3-download-card {
   position: relative;
@@ -2505,7 +2482,6 @@ footer p {
 .v3-feedback h2 {
   font-size: clamp(2.3rem, 4vw, 4.2rem);
   line-height: 1;
-  letter-spacing: -0.05em;
 }
 .v3-feedback-card {
   padding: 28px;
@@ -2542,7 +2518,6 @@ footer p {
   color: var(--muted);
   font-size: 0.8rem;
   font-weight: 900;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 .v3-feedback-note {
