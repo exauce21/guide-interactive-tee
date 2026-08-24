@@ -2378,11 +2378,17 @@
       .map(function (e) {
         var tone =
           e.couleur === "vert" ? "mint" : e.couleur === "bleu" ? "blue" : "red";
+        var phaseIcon =
+          e.phase === "Avant"
+            ? '<i class="fa-solid fa-arrow-left-long"></i>'
+            : e.phase === "Pendant"
+              ? '<i class="fa-solid fa-arrow-down-long"></i>'
+              : '<i class="fa-solid fa-arrow-right-long"></i>';
         return (
           '<article class="handoff-card tone-' +
           tone +
-          '"><div class="handoff-card-title"><span>' +
-          (e.phase === "Avant" ? "↺" : e.phase === "Pendant" ? "△" : "→") +
+          '"><div class="handoff-card-title"><span class="handoff-phase-icon">' +
+          phaseIcon +
           "</span><div><h3>" +
           esc(e.phase) +
           "</h3><p>" +

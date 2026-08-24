@@ -1269,8 +1269,14 @@ p {
   border-radius: 50%;
   color: var(--ink);
   background: var(--white);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 900;
+}
+
+.handoff-card-title > span i {
+  display: block;
+  font-size: 19px;
+  line-height: 1;
 }
 
 .handoff-card-title h3 {
