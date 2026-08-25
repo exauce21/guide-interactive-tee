@@ -1849,6 +1849,7 @@
       b5: "documents/boussole-05-eleves-situation-handicap.pdf",
     },
   };
+  
   var state = {
     observations: {},
     profiles: {},
