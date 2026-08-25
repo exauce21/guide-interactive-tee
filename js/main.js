@@ -2666,4 +2666,6 @@
   renderLevels();
   renderHandoff();
   renderAbout();
+  
+  // Reveal initialization moved to js/animations.js
 })();
