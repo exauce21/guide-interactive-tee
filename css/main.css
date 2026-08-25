@@ -1052,12 +1052,48 @@ p {
   padding-top: 120px;
 }
 
+/* Center the boussoles (compass) section and its inner content */
+#boussoles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#boussoles .section-heading {
+  max-width: 1550px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#boussoles .v3-intersection {
+  max-width: 1550px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+#boussoles .compass-selector,
+#boussoles .compass-detail {
+  width: 100%;
+  max-width: 1550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .compass-selector {
   display: flex;
   gap: 8px;
   margin-bottom: 18px;
   padding-bottom: 4px;
   overflow-x: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .compass-selector button {
@@ -1160,7 +1196,7 @@ p {
 }
 
 .navigation-section > * {
-  max-width: 1400px;
+  max-width: 1550px;
   margin-right: auto;
   margin-left: auto;
 }
