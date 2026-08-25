@@ -841,7 +841,6 @@ p {
   margin: 0 auto;
   padding: clamp(34px, 5vw, 70px);
   scroll-margin-top: 90px;
-  border-radius: 30px;
   color: var(--white);
   background: var(--navy);
   box-shadow: var(--shadow);
@@ -851,8 +850,6 @@ p {
   display: flex;
   justify-content: space-between;
   gap: 36px;
-  margin-bottom: 36px;
-  padding-bottom: 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
@@ -898,7 +895,7 @@ p {
   align-items: center;
   gap: 7px;
   border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 9px;
+  border-radius: 50px;
   color: var(--white);
   background: rgba(255, 255, 255, 0.06);
   cursor: pointer;
@@ -917,7 +914,6 @@ p {
 .compass-panel {
   overflow: hidden;
   border: 0;
-  border-radius: 18px;
   color: var(--navy);
   background: var(--tone);
 }
@@ -993,7 +989,6 @@ p {
   gap: 18px;
   margin: 14px 0 0;
   padding: 22px 28px;
-  border-radius: 14px;
   color: var(--white);
   background: #050510;
 }
@@ -1121,16 +1116,15 @@ p {
 .compass-detail {
   padding: clamp(26px, 5vw, 56px);
   border: 1px solid var(--line);
-  border-radius: 26px;
+  text-align: left;
   background: var(--white);
   box-shadow: 0 16px 60px rgba(17, 17, 59, 0.07);
 }
 
 .compass-title {
   display: flex;
-  align-items: center;
   gap: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .compass-mark {
@@ -1742,10 +1736,6 @@ footer p {
     width: 100%;
   }
 
-  .detail-shell {
-    border-radius: 0;
-  }
-
   .detail-header {
     flex-direction: column;
   }
@@ -2326,7 +2316,6 @@ footer p {
   display: block;
   padding: 13px 14px;
   border: 1px solid var(--line);
-  border-radius: 12px;
   background: white;
   color: var(--ink);
 }
@@ -2499,6 +2488,14 @@ footer p {
   border-radius: 12px;
   background: #eaf9f5;
   color: #165548;
+  font-size: 0.85rem;
+}
+.v4-local-note {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #f9eaea;
+  color: var(--red);
   font-size: 0.85rem;
 }
 .v3-about {

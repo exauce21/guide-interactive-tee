@@ -2081,7 +2081,7 @@
     return file
       ? '<a class="tool-button" href="' +
           esc(file) +
-          '" download><span aria-hidden="true">↓</span> Télécharger ' +
+          '" download><span aria-hidden="true"><i class="fa-solid fa-download"></i></span> Télécharger ' +
           (d.type === "fiche" ? "la fiche" : "la boussole") +
           " PDF</a>"
       : "";
