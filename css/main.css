@@ -1669,15 +1669,18 @@ p {
 .footer-top-inner {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
   flex-wrap: wrap;
   gap: 40px;
-  max-width: 1400px;
+  max-width: 1270px;
   margin: 0 auto;
 }
 
 .brand-block {
   max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .logo-row {
@@ -1705,9 +1708,10 @@ p {
 
 .links-cta-block {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 60px;
   flex-wrap: wrap;
+  margin-left: auto;
 }
 
 .useful-links .label {
@@ -1725,7 +1729,6 @@ p {
 
 .useful-links li {
   font-size: 17px;
-  margin-bottom: 10px;
   color: var(--text-dark);
 }
 
@@ -1772,7 +1775,7 @@ p {
 }
 
 .footer-bottom-inner {
-  max-width: 1400px;
+  max-width: 1270px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -1815,14 +1818,14 @@ p {
 }
 
 .footer-divider {
-  max-width: 1400px;
+  max-width: 1270px;
   margin: 32px auto 0;
   border: none;
   border-top: 1px solid var(--border-light);
 }
 
 .footer-legal {
-  max-width: 1400px;
+  max-width: 1270px;
   margin: 0 auto;
   padding: 22px 0;
   display: flex;
