@@ -245,7 +245,9 @@ p {
   padding: clamp(72px, 10vw, 110px) clamp(24px, 7vw, 112px);
   overflow: hidden;
   color: var(--white);
-  background: var(--navy);
+  background:
+    radial-gradient(circle at 80% 50%, rgba(38, 57, 199, 0.46), transparent 28%),
+    var(--navy);
 }
 
 .hero::before {
