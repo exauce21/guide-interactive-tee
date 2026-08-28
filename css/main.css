@@ -1346,13 +1346,11 @@ p {
   background: var(--tone);
   font-size: 0.74rem;
   font-weight: 900;
-  text-transform: uppercase;
 }
 
 .level-title h3 {
   margin: 0;
-  font-size: 28px;
-  text-transform: uppercase;
+  font-size: 28px
 }
 
 .level-columns {
@@ -1469,7 +1467,6 @@ p {
 .handoff-card-title h3 {
   margin-bottom: 0;
   font-size: 1.5rem;
-  text-transform: uppercase;
 }
 
 .handoff-card-title p {
@@ -3181,6 +3178,38 @@ p {
 
   .v3-guide-pdf .button {
     width: 100%;
+  }
+
+  .v3-intersection {
+    position: relative;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 18px auto 26px;
+    padding: 30px 16px 18px;
+    text-align: center;
+  }
+
+  .v3-intersection > span {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+  }
+
+  .v3-intersection h3 {
+    margin-top: 8px;
+    font-size: 0.94rem;
+  }
+
+  .v3-intersection p {
+    font-size: 0.82rem;
+    line-height: 1.55;
   }
 
   .site-header {
