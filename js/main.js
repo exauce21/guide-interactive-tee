@@ -2542,6 +2542,24 @@
   var header = document.querySelector(".site-header");
   var menuToggle = document.querySelector(".mobile-nav-toggle");
 
+  function setViewportState() {
+    var width = window.innerWidth;
+    var viewportClass = "viewport-default";
+
+    if (width >= 1920) viewportClass = "viewport-xxl";
+    else if (width >= 1536) viewportClass = "viewport-xl";
+    else if (width >= 1280) viewportClass = "viewport-lg";
+    else if (width >= 1024) viewportClass = "viewport-md";
+    else if (width >= 768) viewportClass = "viewport-sm";
+    else if (width >= 480) viewportClass = "viewport-xs";
+    else viewportClass = "viewport-xxs";
+
+    document.body.setAttribute("data-viewport", viewportClass);
+  }
+
+  setViewportState();
+  window.addEventListener("resize", setViewportState, { passive: true });
+
   if (header && menuToggle) {
     menuToggle.addEventListener("click", function () {
       var isOpen = header.classList.toggle("is-open");
