@@ -2381,10 +2381,10 @@
           e.couleur === "vert" ? "mint" : e.couleur === "bleu" ? "blue" : "red";
         var phaseIcon =
           e.phase === "Avant"
-            ? '<i class="fa-solid fa-arrow-left-long"></i>'
+            ? '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="11 6 5 12 11 18"></polyline></svg>'
             : e.phase === "Pendant"
-              ? '<i class="fa-solid fa-arrow-down-long"></i>'
-              : '<i class="fa-solid fa-arrow-right-long"></i>';
+              ? '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="6 13 12 19 18 13"></polyline></svg>'
+              : '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13 6 19 12 13 18"></polyline></svg>';
         return (
           '<article class="handoff-card tone-' +
           tone +

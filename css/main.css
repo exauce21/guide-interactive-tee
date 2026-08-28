@@ -1811,6 +1811,19 @@ p {
   stroke: #fff;
 }
 
+.context-mark svg {
+  width: 20px;
+  height: 20px;
+  stroke: #080808;
+}
+
+.handoff-grid svg {
+  width: 20px;
+  height: 20px;
+  stroke: #080808;
+}
+
+
 /* ---------- Bottom white section ---------- */
 .footer-bottom {
   background: var(--bg-white);
