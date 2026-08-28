@@ -445,12 +445,13 @@ p {
   justify-content: center;
   gap: 12px;
   min-height: 48px;
-  padding: 12px 18px;
-  border: 0;
+  padding: 12px 24px;
+  border: none;
   border-radius: 50px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
+  font-family: helvetica, "helvetica neue", sans-serif;
 }
 
 .button:hover {
@@ -2037,10 +2038,6 @@ p {
     width: 100%;
   }
 
-  .hero-actions .button {
-    flex: 1 1 220px;
-  }
-
   .v3-hero-note {
     max-width: 100%;
   }
@@ -2138,14 +2135,11 @@ p {
     border-left: 0;
   }
 
-  .hero-actions,
-  .hero-actions .button {
-    width: 100%;
-  }
-
   .hero-actions {
     flex-direction: column;
+    gap: 8px;
   }
+
 
   .v3-hero-note {
     align-items: center;
