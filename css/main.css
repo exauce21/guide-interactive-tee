@@ -2639,8 +2639,9 @@ p {
 }
 .v3-about-body {
   padding: 0 22px 24px;
-  color: var(--muted);
-  font-size: 0.94rem;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
 }
 .v3-about-body h3 {
   margin: 26px 0 12px;
