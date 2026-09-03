@@ -418,23 +418,30 @@
           <img src="assets/svg/form-4.svg" alt="Icône de rétroaction" />
         </div>
         <div class="v3-feedback-card">
-          <label>Cette ressource vous paraît-elle utile&nbsp;?<select>
-              <option value="">Choisir une réponse</option>
-              <option>Extrêmement utile</option>
-              <option>Utile</option>
-              <option>Moyennement utile</option>
-              <option>Peu utile</option>
-              <option>Pas utile du tout</option>
-            </select>
-          </label>
-          <label>
-            Votre commentaire
-            <textarea placeholder="Écrivez votre suggestion…"></textarea>
-          </label>
-          <button class="button button-primary" type="button">Envoyer mon commentaire</button>
+          <form id="feedback-form" data-endpoint="https://formsubmit.co/ajax/info@teenational.ca">
+            <label for="feedback-useful">Cette ressource vous paraît-elle utile&nbsp;?
+              <select id="feedback-useful" name="utilite" required>
+                <option value="">Choisir une réponse</option>
+                <option>Extrêmement utile</option>
+                <option>Utile</option>
+                <option>Moyennement utile</option>
+                <option>Peu utile</option>
+                <option>Pas utile du tout</option>
+              </select>
+            </label>
+            <label for="feedback-comment">
+              Votre commentaire
+              <textarea id="feedback-comment" name="commentaire" placeholder="Écrivez votre suggestion…" required></textarea>
+            </label>
+            <label class="v3-feedback-honeypot" aria-hidden="true">Ne pas remplir
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off" />
+            </label>
+            <input type="hidden" name="_subject" value="Nouvelle rétroaction sur le guide TÉÉ" />
+            <button class="button button-primary" type="submit">Envoyer mon commentaire</button>
+            <p class="v3-feedback-status" id="feedback-status" role="status" aria-live="polite"></p>
+          </form>
           <p class="v3-feedback-note">
-            <strong>Confidentialité :</strong> aucun renseignement personnel
-            n’est saisi, transmis ou enregistré par ce prototype.
+            Les réponses sont transmises à <a href="mailto:info@teenational.ca">info@teenational.ca</a>.
           </p>
         </div>
       </div>

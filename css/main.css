@@ -2745,19 +2745,39 @@ p {
   min-height: 110px;
   resize: vertical;
 }
-.v3-feedback-placeholder {
-  display: inline-flex;
-  margin: 0;
-  padding: 10px 13px;
-  border: 1px dashed var(--muted);
-  border-radius: 10px;
+.v3-feedback-card button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+.v3-feedback-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.v3-feedback-status {
+  min-height: 1.25em;
+  margin: 14px 0 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.v3-feedback-status.is-sending {
   color: var(--muted);
-  font-size: 0.8rem;
-  font-weight: 900;
-  text-transform: uppercase;
+}
+.v3-feedback-status.is-success {
+  color: #16734b;
+}
+.v3-feedback-status.is-error {
+  color: #b42318;
 }
 .v3-feedback-note {
   margin: 14px 0 0;
   color: var(--muted);
   font-size: 0.8rem;
+}
+.v3-feedback-note a {
+  color: inherit;
+  font-weight: 900;
 }
