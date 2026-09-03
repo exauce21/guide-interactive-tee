@@ -250,21 +250,6 @@ p {
     var(--navy);
 }
 
-.hero::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 9px;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    var(--red) 0 33%,
-    var(--mint) 33% 66%,
-    var(--gold) 66%
-  );
-  content: "";
-}
-
 .hero-content,
 .hero-aside {
   position: relative;
