@@ -805,7 +805,7 @@ p {
 }
 
 .action-card.is-selected {
-  background: color-mix(in srgb, var(--tone) 7%, white);
+  background: color-mix(in srgb, var(--tone) 4%, white);
 }
 
 .tone-red {
@@ -2017,6 +2017,7 @@ p {
   padding: clamp(64px, 7vw, 100px) clamp(24px, 7vw, 112px);
   background: white;
 }
+
 .v3-context-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
@@ -2028,9 +2029,7 @@ p {
 .v3-context-callout {
   padding: clamp(28px, 4vw, 52px);
 }
-.v3-context-copy {
-  border: 1px solid var(--line);
-}
+
 .v3-context-callout {
   color: white;
   background: var(--navy);
