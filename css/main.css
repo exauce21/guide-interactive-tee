@@ -1480,17 +1480,23 @@ p {
   grid-template-columns: 24px 1fr;
   gap: 10px;
   padding: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.13);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
   cursor: pointer;
   transition: opacity 160ms ease;
 }
 
-.handoff-card.tone-mint .checklist label {
-  border-color: rgba(17, 17, 59, 0.13);
-  background: rgba(255, 255, 255, 0.28);
+.checklist label:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transition: .4s;
+  transition-behavior: normal;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: all;
+
 }
+
+
 
 .checklist input {
   position: absolute;
