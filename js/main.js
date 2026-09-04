@@ -2069,9 +2069,9 @@
           String(d.num).padStart(2, "0") +
           '</span><span class="action-tag">' +
           esc(d.tag) +
-          "</span><strong>" +
+          "</span>" +
           esc(d.titre) +
-          '</strong><span class="action-arrow" aria-hidden="true">↗</span></button>'
+          '<span class="action-arrow" aria-hidden="true">↗</span></button>'
         );
       })
       .join("");

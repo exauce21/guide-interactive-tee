@@ -722,7 +722,6 @@ p {
 
 .actions-section {
   padding-top: 84px;
-  background: var(--white);
 }
 
 .split-heading {
@@ -777,7 +776,7 @@ p {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  border: 1px solid var(--line);
+  border: none;
   color: var(--ink);
   background: var(--white);
   cursor: pointer;
@@ -846,7 +845,7 @@ p {
 .action-card strong {
   max-width: 180px;
   margin-top: 8px;
-  font-size: 1.02rem;
+  font-size: 22px;
   line-height: 1.25;
 }
 
@@ -1079,6 +1078,7 @@ p {
 
 .compass-section {
   padding-top: 120px;
+  background: var(--white);
 }
 
 /* Center the boussoles (compass) section and its inner content */
@@ -2056,7 +2056,7 @@ p {
 }
 .v3-orientation {
   padding: clamp(72px, 8vw, 112px) clamp(24px, 7vw, 112px);
-  background: var(--paper);
+  background: var(--mint);
 }
 .v3-orientation-inner {
   max-width: 1280px;
@@ -2290,7 +2290,7 @@ p {
   padding: 3px 8px;
   background: var(--gold);
   color: var(--navy);
-  font-size: 0.68rem;
+  font-size: 18px;
   font-weight: 900;
 }
 .v3-result strong {
