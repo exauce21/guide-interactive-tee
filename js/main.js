@@ -2214,7 +2214,7 @@
           (state.compass === d.id) +
           '" class="' +
           (state.compass === d.id ? "is-selected" : "") +
-          '"><span aria-hidden="true">⌖</span>' +
+          '">' +
           esc(d.titre) +
           "</button>"
         );
