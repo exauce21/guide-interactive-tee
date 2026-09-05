@@ -440,6 +440,12 @@ p {
 .button:hover {
   background: var(--mint);
   color: #000;
+  transition: .4s;
+  transition-behavior: normal;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: all;
 }
 
 .button-light {
@@ -468,6 +474,11 @@ p {
   border: 1px solid var(--line);
   color: var(--ink);
   background: transparent;
+}
+
+.button-third {
+  color: var(--white);
+  background: var(--red);
 }
 
 .button-span {
@@ -2692,7 +2703,7 @@ p {
   color: var(--ink);
 }
 .v3-feedback {
-  background: var(--ink);
+  background: var(--blue);
 }
 
 .v3-feedback-inner {
@@ -2703,7 +2714,6 @@ p {
   align-items: center;
   margin: 0 auto;
   padding: clamp(72px, 8vw, 112px) clamp(24px, 7vw, 112px);
-  background: var(--ink);
 }
 .v3-feedback h2 {
   font-size: 45px;
