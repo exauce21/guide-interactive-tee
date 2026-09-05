@@ -595,7 +595,7 @@ p {
 .content-section,
 .handoff-section,
 .liaison-section {
-  max-width: 1700px;
+  /* max-width: 1700px; */
   margin: 0 auto;
   padding: clamp(72px, 9vw, 120px) clamp(20px, 5vw, 72px);
 }
@@ -1143,7 +1143,7 @@ p {
 .compass-selector button:hover {
   color: var(--text-dark);
   background: var(--mint);
-  border: none;
+  border: 1px solid var(--mint);
   transition: .4s;
   transition-behavior: normal;
   transition-duration: 0.4s;
@@ -2409,7 +2409,7 @@ p {
   max-width: 920px;
   margin-bottom: 34px;
   padding: 24px;
-  background: var(--navy);
+  background: var(--red);
   color: white;
 }
 .v3-intersection > span {
@@ -2418,8 +2418,8 @@ p {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--mint);
-  color: var(--navy);
+  background: var(--white);
+  color: #000;
   font-weight: 900;
 }
 .v3-intersection h3 {
