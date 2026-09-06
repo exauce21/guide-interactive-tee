@@ -1269,17 +1269,10 @@ p {
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  background: rgba(255, 255, 255, 0.05);
+
 }
 
-.level-stepper::before {
-  position: absolute;
-  top: 27px;
-  right: 8%;
-  left: 8%;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.12);
-  content: "";
-}
 
 .level-button {
   position: relative;
@@ -1292,10 +1285,11 @@ p {
   justify-content: flex-start;
   gap: 11px;
   border: none;
-  color: rgba(255, 255, 255, 0.62);
+  color: var(--white);
   background: rgba(255, 255, 255, 0.05);
   cursor: pointer;
   text-align: center;
+  font-weight: 500;
 }
 
 .level-button > span {
@@ -1303,7 +1297,6 @@ p {
   width: 34px;
   height: 34px;
   place-items: center;
-  border: 2px solid var(--tone);
   border-radius: 50%;
   color: var(--tone);
   background: var(--navy);
@@ -1317,9 +1310,9 @@ p {
 }
 
 .level-button.is-selected {
-  border-color: color-mix(in srgb, var(--tone) 60%, transparent);
   color: var(--white);
-  background: color-mix(in srgb, var(--tone) 16%, var(--navy));
+  border-top-right-radius: 30px;
+  background: color-mix(in srgb, var(--tone) 100%, var(--navy));
 }
 
 .level-detail {
