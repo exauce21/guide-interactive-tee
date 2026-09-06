@@ -1269,8 +1269,6 @@ p {
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background: rgba(255, 255, 255, 0.05);
-
 }
 
 
@@ -1285,11 +1283,13 @@ p {
   justify-content: flex-start;
   gap: 11px;
   border: none;
-  color: var(--white);
-  background: rgba(255, 255, 255, 0.05);
+  color: var(--ink);
+  background: rgb(255, 255, 255);
   cursor: pointer;
   text-align: center;
   font-weight: 500;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
 
 .level-button > span {
@@ -1311,8 +1311,7 @@ p {
 
 .level-button.is-selected {
   color: var(--white);
-  border-top-right-radius: 30px;
-  background: color-mix(in srgb, var(--tone) 100%, var(--navy));
+  background: color-mix(in srgb, var(--tone) 16%, var(--navy));
 }
 
 .level-detail {
