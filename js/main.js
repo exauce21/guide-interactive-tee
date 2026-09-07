@@ -2207,16 +2207,21 @@
   function renderCompassSelector() {
     document.getElementById("compass-selector").innerHTML = data.compasses
       .map(function (d) {
+        var selected = state.compass === d.id;
         return (
           '<button type="button" role="tab" data-compass="' +
           d.id +
           '" aria-selected="' +
-          (state.compass === d.id) +
+          selected +
+          '" aria-expanded="' +
+          selected +
           '" class="' +
-          (state.compass === d.id ? "is-selected" : "") +
+          (selected ? "is-selected" : "") +
           '">' +
           esc(d.titre) +
-          "</button>"
+          "<i class='fa-solid fa-angle-" +
+          (selected ? "up" : "down") +
+          "'></i></button>"
         );
       })
       .join("");
@@ -2297,12 +2302,36 @@
   function openCompass(id, scroll) {
     var d = docById(id);
     if (!d) return;
+    var shell = document.getElementById("compass-detail");
+    if (state.compass === id && !shell.hidden) {
+      state.compass = null;
+      shell.classList.remove("is-open");
+      renderCompassSelector();
+      var closeToken = (shell._closeToken || 0) + 1;
+      shell._closeToken = closeToken;
+      shell.addEventListener(
+        "transitionend",
+        function (event) {
+          if (
+            event.propertyName === "max-height" &&
+            shell._closeToken === closeToken &&
+            !shell.classList.contains("is-open")
+          ) {
+            shell.hidden = true;
+          }
+        },
+        { once: true },
+      );
+      return;
+    }
     state.compass = id;
     renderCompassSelector();
-    var shell = document.getElementById("compass-detail");
     shell.hidden = false;
     document.getElementById("compass-detail-inner").innerHTML =
-      headerHtml(d, "Boussole d’accompagnement") + compassPanels(d);
+      headerHtml(d, "") + compassPanels(d);
+    requestAnimationFrame(function () {
+      shell.classList.add("is-open");
+    });
     if (scroll)
       setTimeout(function () {
         shell.scrollIntoView({ behavior: "smooth", block: "start" });

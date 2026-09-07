@@ -45,5 +45,14 @@
     opacity: 1 !important;
     transform: none !important;
   }
+
+  .compass-detail,
+  .compass-detail.is-open {
+    max-height: none;
+    padding: clamp(26px, 5vw, 56px);
+    transition: none !important;
+    opacity: 1;
+    transform: none;
+  }
 }
 
