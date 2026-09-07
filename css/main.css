@@ -1262,7 +1262,7 @@ p {
 }
 
 .centered-heading > p:last-child {
-  color: rgba(255, 255, 255, 0.62);
+  color: var(--white);
 }
 
 .level-stepper {
@@ -1292,6 +1292,17 @@ p {
   border-top-left-radius: 30px;
 }
 
+.level-button:hover {
+  color: var(--white);
+  background: color-mix(in srgb, var(--tone) 100%, var(--navy));
+  transition: .4s;
+  transition-behavior: normal;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: all;
+}
+
 .level-button > span {
   display: grid;
   width: 34px;
@@ -1299,7 +1310,7 @@ p {
   place-items: center;
   border-radius: 50%;
   color: var(--tone);
-  background: var(--navy);
+  background: var(--paper);
   font-size: 0.84rem;
   font-weight: 900;
 }
@@ -1311,7 +1322,7 @@ p {
 
 .level-button.is-selected {
   color: var(--white);
-  background: color-mix(in srgb, var(--tone) 16%, var(--navy));
+  background: color-mix(in srgb, var(--tone) 100%, var(--navy));
 }
 
 .level-detail {
@@ -1326,7 +1337,6 @@ p {
   padding: 28px 34px;
   align-items: center;
   gap: 24px;
-  border-bottom: 6px solid var(--tone);
   background: color-mix(in srgb, var(--tone) 8%, white);
 }
 
