@@ -1356,6 +1356,7 @@ p {
 .level-title h3 {
   margin: 0;
   font-size: 28px;
+  font-weight: 500;
 }
 
 .level-columns {
@@ -1374,9 +1375,8 @@ p {
 .level-columns article > p {
   margin-bottom: 18px;
   color: var(--blue);
-  font-size: 0.73rem;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .level-columns ul {
@@ -1388,7 +1388,7 @@ p {
 }
 
 .level-columns li {
-  font-size: 0.87rem;
+  font-size: 16px;
   line-height: 1.55;
 }
 
