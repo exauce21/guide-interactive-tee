@@ -390,6 +390,16 @@ p {
   display: inline-block;
 }
 
+.eyebrow.gray {
+  color: #000;
+  padding: 5px 20px 5px 20px;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #000;
+  border-radius: 16px 16px 16px 16px;
+  display: inline-block;
+}
+
 .eyebrow.white {
   color: var(--white);
   padding: 5px 20px 5px 20px;
@@ -1395,9 +1405,8 @@ p {
 
 .level-columns article > p {
   margin-bottom: 18px;
-  color: var(--blue);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .level-columns ul {
@@ -2125,7 +2134,6 @@ p {
 .v3-questionnaire,
 .v3-results {
   background: white;
-  box-shadow: var(--shadow);
 }
 .v3-questionnaire {
   padding: clamp(24px, 4vw, 46px);
@@ -2249,13 +2257,7 @@ p {
   background: var(--blue);
 }
 .v3-reset {
-  margin-top: 24px;
-  border: 0;
-  background: none;
-  color: var(--blue);
-  text-decoration: underline;
-  cursor: pointer;
-  font-weight: 800;
+  margin-top: 34px;
 }
 .v3-results-head {
   display: flex;
@@ -2619,7 +2621,6 @@ p {
   align-items: center;
   margin: 0 0 28px;
   padding: 22px;
-  border: 1px solid var(--line);
   border-radius: 50px;
   background: white;
   box-shadow: 0 8px 28px rgba(17, 17, 59, 0.05);

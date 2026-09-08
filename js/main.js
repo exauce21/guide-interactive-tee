@@ -1930,9 +1930,9 @@
               selected +
               '"><span>' +
               (selected ? "✓" : "") +
-              "</span><strong>" +
+              "</span>" +
               esc(o.label) +
-              "</strong></button>"
+              "</button>"
             );
           })
           .join("");
@@ -1957,9 +1957,9 @@
           selected +
           '"><span>' +
           (selected ? "✓" : "") +
-          "</span><strong>" +
+          "</span>" +
           esc(d.titre) +
-          "</strong></button>"
+          "</button>"
         );
       })
       .join("");
