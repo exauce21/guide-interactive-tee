@@ -54,5 +54,13 @@
     opacity: 1;
     transform: none;
   }
+
+  .detail-shell,
+  .detail-shell.is-open {
+    max-height: none;
+    transition: none !important;
+    opacity: 1;
+    transform: none;
+  }
 }
 

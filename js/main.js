@@ -2027,7 +2027,7 @@
     if (!results.length) {
       zone.innerHTML =
         urgent +
-        '<div class="v3-empty"><span>⌖</span><strong>Vos résultats apparaîtront ici</strong><p>Sélectionnez un ou plusieurs éléments pour commencer.</p></div>';
+        '<div class="v3-empty"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="3"></circle> <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path> </svg><strong>Vos résultats apparaîtront ici</strong><p>Sélectionnez un ou plusieurs éléments pour commencer.</p></div>';
       return;
     }
     zone.innerHTML =
@@ -2055,23 +2055,28 @@
   }
 
   function renderActions() {
+    var detail = document.getElementById("action-detail");
     document.getElementById("action-grid").innerHTML = data.actions
       .map(function (d) {
+        var selected =
+          state.action === d.id && detail && !detail.hidden;
         return (
           '<button class="action-card tone-' +
           d.tone +
-          (state.action === d.id ? " is-selected" : "") +
+          (selected ? " is-selected" : "") +
           '" type="button" data-action="' +
           d.id +
           '" aria-pressed="' +
-          (state.action === d.id) +
+          selected +
           '"><span class="action-number">' +
           String(d.num).padStart(2, "0") +
           '</span><span class="action-tag">' +
           esc(d.tag) +
           "</span>" +
           esc(d.titre) +
-          '<span class="action-arrow" aria-hidden="true">↗</span></button>'
+          '<span class="action-arrow" aria-hidden="true"><i class="fa-solid fa-angle-' +
+          (selected ? "up" : "down") +
+          '"></i></span></button>'
         );
       })
       .join("");
@@ -2141,7 +2146,7 @@
   }
   function actionPanels(d) {
     var detect =
-      '<details class="detail-panel tone-red" open><summary><span>◎</span>Détecter<i aria-hidden="true">⌄</i></summary><div style="padding:0 18px 18px">' +
+      '<details class="detail-panel tone-red" open><summary>Détecter</summary><div style="padding:0 18px 18px">' +
       d.detecter
         .map(function (x, i) {
           var reveal = x.c
@@ -2168,15 +2173,15 @@
         .join("") +
       "</div></details>";
     var agir =
-      '<details class="detail-panel tone-blue" open><summary><span>↗</span>Agir<i aria-hidden="true">⌄</i></summary>' +
+      '<details class="detail-panel tone-blue" open><summary>Agir<i aria-hidden="true">⌄</i></summary>' +
       list(d.agir) +
       "</details>";
     var init =
-      '<details class="detail-panel tone-mint" open><summary><span>✦</span>Initiatives concrètes<i aria-hidden="true">⌄</i></summary>' +
+      '<details class="detail-panel tone-mint" open><summary>Initiatives concrètes<i aria-hidden="true">⌄</i></summary>' +
       list(d.initiatives) +
       "</details>";
     var res =
-      '<details class="detail-panel tone-gold" open><summary><span>↗</span>Appuis et ressources<i aria-hidden="true">⌄</i></summary>' +
+      '<details class="detail-panel tone-gold" open><summary>Appuis et ressources<i aria-hidden="true">⌄</i></summary>' +
       resourcesHtml(d.ressources) +
       "</details>";
     return (
@@ -2192,12 +2197,41 @@
   function openAction(id, scroll) {
     var d = docById(id);
     if (!d) return;
-    state.action = id;
-    renderActions();
     var shell = document.getElementById("action-detail");
+    if (state.action === id && !shell.hidden) {
+      state.action = null;
+      shell.classList.remove("is-open");
+      renderActions();
+      var closeToken = (shell._closeToken || 0) + 1;
+      shell._closeToken = closeToken;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        shell.hidden = true;
+        return;
+      }
+      shell.addEventListener(
+        "transitionend",
+        function (event) {
+          if (
+            event.propertyName === "max-height" &&
+            shell._closeToken === closeToken &&
+            !shell.classList.contains("is-open")
+          ) {
+            shell.hidden = true;
+          }
+        },
+        { once: true },
+      );
+      return;
+    }
+    state.action = id;
     shell.hidden = false;
+    renderActions();
     document.getElementById("action-detail-inner").innerHTML =
       headerHtml(d, "Fiche d’action " + d.num) + actionPanels(d);
+    shell._closeToken = (shell._closeToken || 0) + 1;
+    requestAnimationFrame(function () {
+      shell.classList.add("is-open");
+    });
     if (scroll)
       setTimeout(function () {
         shell.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -2325,8 +2359,8 @@
       return;
     }
     state.compass = id;
-    renderCompassSelector();
     shell.hidden = false;
+    renderCompassSelector();
     document.getElementById("compass-detail-inner").innerHTML =
       headerHtml(d, "") + compassPanels(d);
     requestAnimationFrame(function () {
