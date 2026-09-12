@@ -2021,7 +2021,7 @@
       results.length + " résultat" + (results.length === 1 ? "" : "s");
     var urgent =
       state.stage === "urgent"
-        ? '<div class="v3-urgent"><strong>Situation à risque immédiat</strong>Consultez d’abord le niveau 4 : évaluer le danger, noter les observations et agir en concertation avec votre hiérarchie.<button class="v3-reset" style="margin-top:8px" type="button" data-open-level="3">Ouvrir le niveau 4 →</button></div>'
+        ? '<div class="v3-urgent"><strong>Situation à risque immédiat</strong>Consultez d’abord le niveau 4 : évaluer le danger, noter les observations et agir en concertation avec votre hiérarchie.<br/><button class="v3-reset" style="margin-top:8px" type="button" data-open-level="3">Ouvrir le niveau 4 →</button></div>'
         : "";
     var zone = document.getElementById("orientation-results");
     if (!results.length) {
