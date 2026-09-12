@@ -2124,9 +2124,9 @@
             (r.url ? ' target="_blank" rel="noopener noreferrer"' : "") +
             "><strong>" +
             esc(r.t) +
-            '<span class="v3-external" aria-label="Lien externe">↗</span></strong><small>' +
+            '<span class="v3-external" aria-label="Lien externe">↗</span></strong>' +
             esc(r.d) +
-            "</small></a>"
+            "</a>"
           );
         })
         .join("") +
@@ -2137,11 +2137,11 @@
     return c
       ? '<blockquote class="essential-quote"><span aria-hidden="true">“</span><div><p>L’essentiel en une phrase</p><strong>« ' +
           esc(c.txt) +
-          " »</strong><small>— " +
+          " »</strong>" +
           esc(c.auteur) +
           ". " +
           esc(c.note) +
-          "</small></div></blockquote>"
+          "</div></blockquote>"
       : "";
   }
   function actionPanels(d) {
@@ -2173,15 +2173,15 @@
         .join("") +
       "</div></details>";
     var agir =
-      '<details class="detail-panel tone-blue" open><summary>Agir<i aria-hidden="true">⌄</i></summary>' +
+      '<details class="detail-panel tone-blue" open><summary>Agir</summary>' +
       list(d.agir) +
       "</details>";
     var init =
-      '<details class="detail-panel tone-mint" open><summary>Initiatives concrètes<i aria-hidden="true">⌄</i></summary>' +
+      '<details class="detail-panel tone-mint" open><summary>Initiatives concrètes</summary>' +
       list(d.initiatives) +
       "</details>";
     var res =
-      '<details class="detail-panel tone-gold" open><summary>Appuis et ressources<i aria-hidden="true">⌄</i></summary>' +
+      '<details class="detail-panel tone-gold" open><summary>Appuis et ressources</summary>' +
       resourcesHtml(d.ressources) +
       "</details>";
     return (

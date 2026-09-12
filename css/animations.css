@@ -25,13 +25,13 @@
 }
 
 /* Generic reveal attribute for elements to animate when in view */
-[data-reveal] {
+[data-reveal]:not(.v3-reveal) {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 1600ms var(--reveal-ease), transform 1600ms var(--reveal-ease);
 }
 
-[data-reveal].is-visible {
+[data-reveal]:not(.v3-reveal).is-visible {
   opacity: 1;
   transform: none;
 }
@@ -39,7 +39,7 @@
 @media (prefers-reduced-motion: reduce) {
   .animate-in .hero-aside img,
   .animate-in .hero-content,
-  [data-reveal] {
+  [data-reveal]:not(.v3-reveal) {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;
