@@ -287,6 +287,12 @@
     padding-bottom: 52px;
   }
 
+  .v3-feedback-inner::after {
+    right: 0;
+    width: 100%;
+    background-position: right center;
+  }
+
   .v3-feedback-card {
     max-width: 100%;
     justify-self: stretch;
@@ -359,6 +365,16 @@
   .v3-feedback h2 {
     font-size: clamp(28px, 8vw, 36px);
     line-height: 1.08;
+  }
+
+  .v3-feedback-inner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .v3-feedback-inner::after {
+    opacity: 0.08;
+    background-size: auto 70%;
   }
 
   .v3-intersection,
