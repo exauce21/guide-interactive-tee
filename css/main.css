@@ -1,5 +1,6 @@
 :root {
   --ink: #101035;
+  --black: #000000;
   --navy: #11113b;
   --blue: #2639c7;
   --red: #f22d12;
@@ -33,6 +34,45 @@ body {
   line-height: 1.5;
   background: var(--paper);
 }
+
+.welcome-dialog {
+  width: min(620px, calc(100% - 32px));
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+}
+
+.welcome-dialog::backdrop {
+  background: rgba(17, 17, 59, 0.72);
+  backdrop-filter: blur(5px);
+}
+
+.welcome-dialog-card {
+  padding: clamp(28px, 5vw, 54px);
+  border-top: 8px solid var(--red);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.welcome-dialog-card h2 {
+  max-width: 480px;
+  margin-bottom: 18px;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.04;
+}
+
+.welcome-dialog-card p:not(.eyebrow) {
+  margin-bottom: 28px;
+  color: var(--muted);
+}
+
+.welcome-dialog-card #welcome-dialog-close:focus-visible {
+  outline: none;
+}
+
+
 
 button,
 input,
@@ -388,7 +428,7 @@ p {
 }
 
 .eyebrow.dark {
-  color: var(--gray);
+  color: var(--black);
   padding: 5px 20px 5px 20px;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
@@ -418,6 +458,7 @@ p {
 }
 
 .hero h1 {
+  margin-top: 50px;
   max-width: 850px;
   margin-bottom: 28px;
   font-size: 65px;
@@ -478,9 +519,8 @@ p {
 }
 
 .button-ghost {
-  border: 1px solid rgba(255, 255, 255, 0.28);
   color: var(--white);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--blue)  ;
 }
 
 .button-primary {
@@ -2032,7 +2072,7 @@ p {
 }
 .v3-audience {
   margin: -12px 0 24px;
-  color: var(--mint);
+  color: var(--muted);
   font-weight: 500;
   font-size: 20px;
 }
@@ -2041,9 +2081,8 @@ p {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  max-width: 440px;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 14px;
+  max-width: 640px;
+  color: #000;
 }
 .v3-hero-note span {
   display: grid;

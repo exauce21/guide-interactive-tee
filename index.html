@@ -14,6 +14,16 @@
 </head>
 
 <body>
+  <dialog class="welcome-dialog" id="welcome-dialog" aria-labelledby="welcome-dialog-title">
+    <div class="welcome-dialog-card">
+      <p class="eyebrow dark">Bienvenue dans le guide</p>
+      <h2 id="welcome-dialog-title">Un appui concret pour vos interventions</h2>
+      <p>
+        Les situations rencontrées sur le terrain sont souvent multidimensionnelles et chargées d’émotion, l’instinct ne suffit pas. Ce guide met à votre disposition un plan méthodique pour structurer et sécuriser votre pratique. Utilisez-le comme un coffre à outils : adaptez-le, modelez-le selon la réalité de votre école et, surtout, selon votre propre expertise humaine. Il est là pour vous soutenir, pas pour vous dicter votre conduite.
+      </p>
+      <button class="button button-third" type="button" id="welcome-dialog-close">Découvrir le guide</button>
+    </div>
+  </dialog>
   <main>
     <header class="site-header">
       <a class="brand" href="#accueil" aria-label="Retour à l’accueil"><img src="./assets/svg/logo-rntee.svg"
@@ -44,20 +54,12 @@
 
     <section class="hero" id="accueil">
       <div class="hero-content">
-        <p class="eyebrow">Coordination nationale TÉÉ</p>
         <h1>Guide interactif d’accompagnement des élèves à besoins élevés</h1>
-        <p class="v3-audience">
+        <p class="v3-hero-note">
+          <span>i</span>
           À l’intention des travailleuses et travailleurs d’établissement dans
-          les écoles (TÉÉ)
-        </p>
-        <p class="hero-copy">
-          Les situations rencontrées sur le terrain sont souvent
-          multidimensionnelles et chargées d’émotion, l’instinct ne suffit
-          pas. Ce guide met à votre disposition un plan méthodique pour
-          structurer et sécuriser votre pratique. Utilisez-le comme un coffre
-          à outils : adaptez-le, modelez-le selon la réalité de votre école
-          et, surtout, selon votre propre expertise humaine. Il est là pour
-          vous soutenir, pas pour vous dicter votre conduite.
+          les écoles (TÉÉ). Ce guide n’est pas un protocole figé. Il soutient le
+          jugement professionnel sans conditionner la démarche du TÉÉ.
         </p>
         <div class="hero-actions">
           <div class="cta-row">
@@ -73,10 +75,6 @@
               <a class="button button-ghost" href="#navigation">Situer mon intervention</a>
           </div>
         </div>
-        <p class="v3-hero-note">
-          <span>i</span>Ce guide n’est pas un protocole figé. Il soutient le
-          jugement professionnel sans conditionner la démarche du TÉÉ.
-        </p>
       </div>
       <aside class="hero-aside">
         <img src="./assets/img/guide-tee-2.png" alt="Image représentant le guide">

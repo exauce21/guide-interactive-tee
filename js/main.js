@@ -2670,6 +2670,19 @@
   setViewportState();
   window.addEventListener("resize", setViewportState, { passive: true });
 
+  var welcomeDialog = document.getElementById("welcome-dialog");
+  var welcomeDialogClose = document.getElementById("welcome-dialog-close");
+
+  if (welcomeDialog && welcomeDialogClose) {
+    welcomeDialogClose.addEventListener("click", function () {
+      welcomeDialog.close();
+    });
+    welcomeDialog.addEventListener("click", function (event) {
+      if (event.target === welcomeDialog) welcomeDialog.close();
+    });
+    welcomeDialog.showModal();
+  }
+
   if (header && menuToggle) {
     menuToggle.addEventListener("click", function () {
       var isOpen = header.classList.toggle("is-open");
