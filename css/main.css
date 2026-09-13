@@ -252,7 +252,7 @@ p {
   padding: clamp(72px, 10vw, 110px) clamp(24px, 7vw, 112px);
   overflow: hidden;
   color: var(--white);
-  background: var(--red);
+  background: #ffffff;
 }
 
 .hero-content,
@@ -421,14 +421,15 @@ p {
   max-width: 850px;
   margin-bottom: 28px;
   font-size: 65px;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 0.94;
+  color: #000;
 }
 
 .hero-copy {
   max-width: 780px;
   margin-bottom: 34px;
-  color: rgba(255, 255, 255, 0.78);
+  color: #000;
   font-size: 18px;
   line-height: 1.7;
 }
