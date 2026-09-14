@@ -413,7 +413,7 @@
           <img src="assets/svg/form-4.svg" alt="Icône de rétroaction" />
         </div>
         <div class="v3-feedback-card">
-          <form id="feedback-form" data-endpoint="https://formsubmit.co/ajax/info@teenational.ca">
+          <form id="feedback-form" data-endpoint="https://formsubmit.co/ajax/exaucezokoi@gmail.com">
             <label for="feedback-useful">Cette ressource vous paraît-elle utile ?
               <select id="feedback-useful" name="utilite" required>
                 <option value="">Choisir une réponse</option>
@@ -432,6 +432,8 @@
               <input type="text" name="_honey" tabindex="-1" autocomplete="off" />
             </label>
             <input type="hidden" name="_subject" value="Nouvelle rétroaction sur le guide TÉÉ" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
             <button class="button button-third" type="submit">Envoyer mon commentaire</button>
             <p class="v3-feedback-status" id="feedback-status" role="status" aria-live="polite"></p>
           </form>
@@ -505,15 +507,12 @@
             </a>
           </div>
         </div>
-
       </div>
-
     </footer>
-
-
   </main>
 
   <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
   <script src="js/animations.js"></script>
 </body>
 
