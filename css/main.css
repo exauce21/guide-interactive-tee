@@ -1484,21 +1484,25 @@ p {
 }
 
 .progress-card {
-  min-width: 210px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 540px;
   padding: 16px 18px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
   background: var(--white);
 }
 
 .progress-card > span {
+  flex: 0 0 auto;
   font-size: 1.2rem;
   font-weight: 900;
+  white-space: nowrap;
 }
 
 .progress-card > div {
+  flex: 1 1 auto;
+  min-width: 48px;
   height: 6px;
-  margin: 8px 0;
   overflow: hidden;
   border-radius: 999px;
   background: var(--line);
@@ -1513,9 +1517,11 @@ p {
 }
 
 .progress-card p {
+  flex: 0 0 auto;
   margin: 0;
   color: var(--muted);
   font-size: 0.72rem;
+  white-space: nowrap;
 }
 
 .handoff-grid {
