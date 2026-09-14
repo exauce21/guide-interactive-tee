@@ -2737,10 +2737,9 @@ p {
 }
 .v3-about details {
   margin-bottom: 12px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: white;
+  border-bottom: 1px solid var(--gold);
   overflow: hidden;
+  border-width: 0px 0px 0.5px 0px;
 }
 .v3-about summary {
   display: flex;
@@ -2749,20 +2748,45 @@ p {
   gap: 14px;
   padding: 22px;
   cursor: pointer;
-  font-weight: 900;
+  font-weight: 400;
+  font-size: 25px;
 }
 .v3-about summary::after {
   content: "＋";
-  color: var(--blue);
+  color: var(--red);
+  background: var(--white);
+  border-radius: 50px;
+  padding: 4px 9px;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 .v3-about details[open] summary::after {
   content: "−";
+  color: var(--navy);
+  background: var(--white);
+  border-radius: 50px;
+  padding: 4px 12px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+@keyframes aboutBodyReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .v3-about-body {
   padding: 0 22px 24px;
   color: #000;
   font-size: 16px;
   font-weight: 500;
+}
+.v3-about details[open] .v3-about-body {
+  animation: aboutBodyReveal 700ms ease both;
 }
 .v3-about-body h3 {
   margin: 26px 0 12px;

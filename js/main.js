@@ -2801,6 +2801,15 @@
         d.open = false;
       });
     });
+  document.querySelectorAll(".v3-about details").forEach(function (detail) {
+    detail.addEventListener("toggle", function () {
+      if (!detail.open) return;
+
+      document.querySelectorAll(".v3-about details").forEach(function (otherDetail) {
+        if (otherDetail !== detail) otherDetail.open = false;
+      });
+    });
+  });
   renderOrientation();
   renderActions();
   renderCompassSelector();
