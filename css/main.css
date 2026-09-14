@@ -1228,7 +1228,7 @@ p {
   color: var(--muted);
   background: transparent;
   cursor: pointer;
-  font-size: 0.82rem;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -2555,12 +2555,12 @@ p {
 }
 .v3-intersection h3 {
   margin: 0 0 6px;
-  font-size: 1rem;
+  font-size: 18px;
 }
 .v3-intersection p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.76);
-  font-size: 0.9rem;
+  color: var(--white);
+  font-size: 17px;
 }
 .v3-severity {
   display: grid;
@@ -2620,12 +2620,12 @@ p {
 }
 .v3-principle h3 {
   margin: 0 0 9px;
-  font-size: 1rem;
+  font-size: 18px;
 }
 .v3-principle p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 17px;
 }
 .v3-download-section {
   display: grid;
