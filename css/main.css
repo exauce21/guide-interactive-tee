@@ -1485,8 +1485,10 @@ p {
 .progress-card {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 12px;
-  min-width: 540px;
+  width: min(100%, 560px);
+  min-width: 0;
   padding: 16px 18px;
   background: var(--white);
 }

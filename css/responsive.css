@@ -118,6 +118,21 @@
     flex-direction: column;
   }
 
+  .progress-card {
+    width: 100%;
+    padding: 14px 16px;
+  }
+
+  .progress-card > div {
+    flex-basis: 100%;
+    min-width: 0;
+  }
+
+  .progress-card > span,
+  .progress-card p {
+    white-space: normal;
+  }
+
   .search-box {
     width: 100%;
   }
