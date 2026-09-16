@@ -77,10 +77,12 @@
   }
 
   .hero-content {
+    max-width: 100%;
     text-align: left;
   }
 
   .hero h1 {
+    margin-top: 0;
     font-size: clamp(36px, 8vw, 44px);
     line-height: 1.02;
   }
@@ -91,10 +93,30 @@
 
   .hero-actions {
     width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-row {
+    width: 100%;
+    margin-top: 18px;
+  }
+
+  .btn-contact,
+  .cta-row .button-ghost {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .btn-arrow {
+    display: none;
   }
 
   .v3-hero-note {
     max-width: 100%;
+    margin-top: 20px;
+    font-size: 17px;
   }
 
   .hero-aside {
@@ -184,12 +206,18 @@
   }
 
   .hero h1 {
+    margin-bottom: 18px;
     font-size: clamp(30px, 9vw, 38px);
   }
 
   .hero-copy {
+    margin-bottom: 20px;
     font-size: 15px;
     line-height: 1.6;
+  }
+
+  .cta-row {
+    margin-top: 12px;
   }
 
   .hero-stats {
