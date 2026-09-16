@@ -328,17 +328,32 @@
     gap: 24px;
     padding-top: 52px;
     padding-bottom: 52px;
+    overflow: hidden;
+  }
+
+  .heading-feedback,
+  .v3-feedback-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .heading-feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .v3-feedback-inner::after {
     right: 0;
     width: 100%;
     background-position: right center;
+    opacity: 0.12;
   }
 
   .v3-feedback-card {
     max-width: 100%;
     justify-self: stretch;
+    padding: 34px 18px 16px;
   }
 
   .v3-feedback h2 {
@@ -413,6 +428,16 @@
   .v3-feedback-inner {
     padding-right: 20px;
     padding-left: 20px;
+    gap: 18px;
+  }
+
+  .heading-feedback > img {
+    width: 30px;
+    padding-top: 18px;
+  }
+
+  .v3-feedback-card {
+    padding: 24px 16px 14px;
   }
 
   .v3-feedback-inner::after {
