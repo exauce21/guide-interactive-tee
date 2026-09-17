@@ -35,7 +35,7 @@
   }
 
   .hero-aside {
-    max-width: 620px;
+    max-width: 100%;
     margin-right: 0;
   }
 
@@ -70,6 +70,15 @@
 
   .prototype-pill {
     font-size: 0.64rem;
+  }
+
+  .welcome-dialog-card h2 {
+    font-size: clamp(28px, 7vw, 38px);
+    line-height: 1.08;
+  }
+
+  .welcome-dialog-card p {
+    font-size: clamp(16px, 3vw, 16px);
   }
 
   .hero {
