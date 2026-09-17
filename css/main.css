@@ -2369,14 +2369,14 @@ p {
   border-radius: 999px;
   padding: 5px 10px;
   background: var(--paper);
-  color: var(--muted);
+  color: var(--red);
   font-size: 0.75rem;
   font-weight: 900;
 }
 .v3-empty {
-  padding: 34px 14px;
+  padding: 54px 24px;
   text-align: center;
-  color: var(--muted);
+  background: var(--paper);
 }
 .v3-empty svg {
   display: grid;
@@ -2385,8 +2385,7 @@ p {
   height: 28px;
   margin: 0 auto 14px;
   border-radius: 50%;
-  background: var(--paper);
-  stroke: #080808;
+  stroke: #050505;
 }
 .v3-result-list {
   display: grid;

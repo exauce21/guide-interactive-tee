@@ -369,6 +369,17 @@
     padding: 34px 18px 16px;
   }
 
+  .v3-results-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .v3-results-count {
+    padding: 4px 9px;
+    font-size: 0.68rem;
+  }
+
   .v3-feedback h2 {
     font-size: clamp(32px, 6vw, 42px);
   }
@@ -464,7 +475,7 @@
   }
 
   .v3-guide-pdf {
-    border-radius: 18px;
+    border-radius: 0px;
     padding: 18px;
   }
 
