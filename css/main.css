@@ -274,6 +274,14 @@ p {
   grid-column: 1 / -1;
   gap: 8px;
   padding-top: 12px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease,
+    padding-top 220ms ease,
+    display 220ms ease;
 }
 
 .mobile-nav a {

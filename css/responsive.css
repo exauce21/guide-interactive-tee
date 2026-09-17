@@ -8,11 +8,28 @@
   }
 
   .site-header {
+    position: sticky;
     grid-template-columns: 1fr auto;
+  }
+
+  .mobile-nav {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    left: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(17, 17, 59, 0.08);
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 16px 32px rgba(17, 17, 59, 0.08);
+    padding-right: clamp(20px, 4vw, 64px);
+    padding-left: clamp(20px, 4vw, 64px);
   }
 
   .site-header.is-open .mobile-nav {
     display: grid;
+    opacity: 1;
+    transform: translateY(0);
+    padding-top: 12px;
   }
 
   .hero {
