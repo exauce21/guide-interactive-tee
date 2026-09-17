@@ -22,6 +22,7 @@
   }
 
   .hero-content {
+    order: 1;
     max-width: 760px;
   }
 
@@ -35,6 +36,7 @@
   }
 
   .hero-aside {
+    order: 2;
     max-width: 100%;
     margin-right: 0;
   }
@@ -86,6 +88,7 @@
   }
 
   .hero-content {
+    order: 2;
     max-width: 100%;
     text-align: left;
   }
@@ -131,6 +134,7 @@
   .hero-aside {
     width: 100%;
     max-width: 100%;
+    order: 1;
   }
 
   .route-section {
