@@ -1864,6 +1864,21 @@
     { id: "preoccupant", label: "Situation préoccupante" },
     { id: "urgent", label: "Risque immédiat" },
   ];
+  function actionVisuals(d) {
+    var map = {
+      f1: { tone: "red", icon: "fa-solid fa-shield-halved" },
+      f2: { tone: "blue", icon: "fa-solid fa-comments" },
+      f3: { tone: "mint", icon: "fa-solid fa-user-group" },
+      f4: { tone: "red", icon: "fa-solid fa-handshake" },
+      f5: { tone: "blue", icon: "fa-solid fa-scale-balanced" },
+      f6: { tone: "blue", icon: "fa-solid fa-book-open" },
+      f7: { tone: "mint", icon: "fa-solid fa-seedling" },
+      f8: { tone: "red", icon: "fa-solid fa-location-dot" },
+      f9: { tone: "blue", icon: "fa-solid fa-users" },
+      f10: { tone: "mint", icon: "fa-solid fa-file-lines" },
+    };
+    return map[d.id] || { tone: d.tone || "blue", icon: "fa-solid fa-circle-info" };
+  }
   function esc(value) {
     return String(value ?? "").replace(/[&<>"']/g, function (c) {
       return {
@@ -2027,7 +2042,7 @@
     if (!results.length) {
       zone.innerHTML =
         urgent +
-        '<div class="v3-empty"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <line x1="12" y1="5" x2="12" y2="19"></line> <line x1="5" y1="12" x2="19" y2="12"></line> </svg><strong>Vos résultats apparaîtront ici</strong><p>Sélectionnez un ou plusieurs éléments pour commencer.</p></div>';
+        '<div class="v3-empty"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="3"></circle> <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path> </svg><strong>Vos résultats apparaîtront ici</strong><p>Sélectionnez un ou plusieurs éléments pour commencer.</p></div>';
       return;
     }
     zone.innerHTML =
@@ -2060,9 +2075,10 @@
       .map(function (d) {
         var selected =
           state.action === d.id && detail && !detail.hidden;
+        var visual = actionVisuals(d);
         return (
           '<button class="action-card tone-' +
-          d.tone +
+          visual.tone +
           (selected ? " is-selected" : "") +
           '" type="button" data-action="' +
           d.id +
@@ -2070,11 +2086,13 @@
           selected +
           '"><span class="action-number">' +
           String(d.num).padStart(2, "0") +
-          '</span><span class="action-tag">' +
+          '</span><span class="action-icon" aria-hidden="true"><i class="' +
+          visual.icon +
+          '"></i></span><span class="action-tag">' +
           esc(d.tag) +
-          "</span>" +
+          '</span><span class="action-title">' +
           esc(d.titre) +
-          '<span class="action-arrow" aria-hidden="true"><i class="fa-solid fa-angle-' +
+          '</span><span class="action-arrow" aria-hidden="true"><i class="fa-solid fa-angle-' +
           (selected ? "up" : "down") +
           '"></i></span></button>'
         );
