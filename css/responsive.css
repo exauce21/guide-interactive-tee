@@ -328,6 +328,14 @@
   .form-actions {
     flex-direction: column-reverse;
   }
+
+   .v3-license-card {
+    padding: 22px;
+  }
+
+  .v3-license-badge {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 1120px) {
@@ -432,6 +440,18 @@
   .footer-bottom {
     padding-right: 24px;
     padding-left: 24px;
+  }
+
+   .v3-license-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .v3-license-card {
+    flex-direction: column;
+  }
+
+  .v3-license-heading h2 {
+    font-size: 36px;
   }
 }
 
