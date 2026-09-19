@@ -2378,13 +2378,7 @@ p {
   color: white;
   background: var(--blue);
 }
-.v3-reset {
-  margin-top: 34px;
-  border: none;
-  background: none;
-  padding-left: 0;
-  cursor: pointer;
-}
+
 .v3-reset:hover {
   background: var(--red);
   color: white;
