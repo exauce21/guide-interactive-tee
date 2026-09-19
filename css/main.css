@@ -2379,18 +2379,6 @@ p {
   background: var(--blue);
 }
 
-.v3-reset:hover {
-  background: var(--red);
-  color: white;
-  border-radius: 50px;
-  padding: 8px 14px;
-  transition: .4s;
-  transition-behavior: normal;
-  transition-duration: 0.4s;
-  transition-timing-function: ease;
-  transition-delay: 0s;
-  transition-property: all;
-}
 .v3-results-head {
   display: flex;
   align-items: center;
