@@ -273,23 +273,35 @@ p {
   display: none;
   grid-column: 1 / -1;
   gap: 8px;
-  padding-top: 12px;
+  padding-top: 0;
+  max-height: 0;
   overflow: hidden;
   opacity: 0;
   transform: translateY(-8px);
+  visibility: hidden;
+  pointer-events: none;
   transition:
+    max-height 320ms ease,
     opacity 220ms ease,
     transform 220ms ease,
     padding-top 220ms ease,
-    display 220ms ease;
+    visibility 220ms ease;
 }
 
 .mobile-nav a {
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(17, 17, 59, 0.08);
+  display: block;
+  padding: 12px clamp(20px, 4vw, 64px);
   color: var(--navy);
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 500;
+  transition: color 180ms ease, background-color 180ms ease, padding-left 180ms ease;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a:focus-visible {
+  padding-left: calc(clamp(20px, 4vw, 64px) + 8px);
+  color: var(--white);
+  background: var(--mint);
 }
 
 .hero {
