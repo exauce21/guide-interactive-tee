@@ -1978,21 +1978,6 @@
         );
       })
       .join("");
-    document.getElementById("stage-choices").innerHTML = stages
-      .map(function (s) {
-        return (
-          '<button type="button" class="v3-stage' +
-          (state.stage === s.id ? " is-selected" : "") +
-          '" data-stage="' +
-          s.id +
-          '" aria-pressed="' +
-          (state.stage === s.id) +
-          '">' +
-          esc(s.label) +
-          "</button>"
-        );
-      })
-      .join("");
     renderResults();
   }
   function renderResults() {
