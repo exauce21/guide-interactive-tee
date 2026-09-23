@@ -294,14 +294,16 @@ p {
   color: var(--navy);
   font-size: 15px;
   font-weight: 500;
-  transition: color 180ms ease, background-color 180ms ease, padding-left 180ms ease;
+  transition: color 180ms ease, background-color 180ms ease, box-shadow 180ms ease, padding-left 180ms ease;
 }
 
 .mobile-nav a:hover,
-.mobile-nav a:focus-visible {
+.mobile-nav a:focus-visible,
+.mobile-nav a:active {
   padding-left: calc(clamp(20px, 4vw, 64px) + 8px);
   color: var(--white);
   background: var(--mint);
+  box-shadow: inset 4px 0 var(--red);
 }
 
 .hero {
