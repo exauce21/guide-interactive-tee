@@ -303,7 +303,6 @@ p {
   padding-left: calc(clamp(20px, 4vw, 64px) + 8px);
   color: var(--white);
   background: var(--mint);
-  box-shadow: inset 4px 0 var(--red);
 }
 
 .hero {
