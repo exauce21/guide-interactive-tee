@@ -301,7 +301,7 @@ p {
 .mobile-nav a:focus-visible,
 .mobile-nav a:active {
   padding-left: calc(clamp(20px, 4vw, 64px) + 8px);
-  color: var(--white);
+  color: var(--black);
   background: var(--mint);
 }
 
